@@ -4489,3 +4489,18 @@ Processing by AccountsController#index as HTML
   [1m[35mAccount Load (0.6ms)[0m  SELECT "accounts".* FROM "accounts"  ORDER BY "accounts"."age" ASC
   Rendered accounts/index.html.erb within layouts/application (1.6ms)
 Completed 200 OK in 44ms (Views: 42.1ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/accounts" for 127.0.0.1 at 2016-06-13 19:26:12 +0300
+  [1m[36mActiveRecord::SchemaMigration Load (1.9ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by AccountsController#index as HTML
+  [1m[35mAccount Load (0.7ms)[0m  SELECT "accounts".* FROM "accounts"  ORDER BY "accounts"."age" ASC
+  Rendered accounts/index.html.erb within layouts/application (5.8ms)
+Completed 200 OK in 412ms (Views: 386.0ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/friendships" for 127.0.0.1 at 2016-06-13 19:26:38 +0300
+Processing by FriendshipsController#index as HTML
+  [1m[36mFriendship Load (0.6ms)[0m  [1mSELECT "friendships".* FROM "friendships"[0m
+  Rendered friendships/index.html.erb within layouts/application (3.5ms)
+Completed 200 OK in 59ms (Views: 44.3ms | ActiveRecord: 1.4ms)
