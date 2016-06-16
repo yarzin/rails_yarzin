@@ -19152,3 +19152,11 @@ Started GET "/assets/product.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde
 
 
 Started GET "/assets/friendships.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-06-16 17:36:24 +0300
+
+
+Started GET "/" for 127.0.0.1 at 2016-06-16 22:22:15 +0300
+  [1m[36mActiveRecord::SchemaMigration Load (39.4ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by ProductsController#index as HTML
+  [1m[35mProduct Load (57.5ms)[0m  SELECT "products".* FROM "products"
+  Rendered products/index.html.haml within layouts/application (2509.2ms)
+Completed 200 OK in 2981ms (Views: 2619.7ms | ActiveRecord: 232.2ms)
