@@ -3,7 +3,7 @@ class ProductsController < ApplicationController
 
   def index
     @products =  Product.all
-    session[:view_count] += 1
+    #session[:view_count] += 1
   end
 
   def new
@@ -14,6 +14,7 @@ class ProductsController < ApplicationController
     @product = Product.new(product_params)
 
     if @product.save
+      flash[:create] = "Product was successfully created"
       redirect_to products_path
     else
       render 'new'
@@ -31,6 +32,17 @@ class ProductsController < ApplicationController
     else
       render 'edit'
     end
+  end
+
+  def show
+    @product = Product.find(params[:id])
+  end
+
+  def destroy
+    @product = Product.find(params[:id])
+    @product.destroy
+    flash[:destroy] = "Product was successfully destroyed."
+    redirect_to products_path
   end
 
   private

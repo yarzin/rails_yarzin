@@ -1,6 +1,15 @@
 Rails.application.routes.draw do
+
+  get 'carts/greet'
+
   resources :friendships
-  resources :products, only: [:index, :new, :create, :edit, :update]
+  resources :products
+
+  post '/carts/add_product', to: 'carts#add', as: 'add_to_cart'
+
+  resource :cart, only: :show
+
+  get 'cart', to: 'cart#show'
 
 
   resources :accounts
@@ -8,7 +17,7 @@ Rails.application.routes.draw do
   # See how all your routes lay out with "rake routes".
 
   # You can have the root of your site routed with "root"
-  root 'accounts#index'
+  root 'products#index'
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'

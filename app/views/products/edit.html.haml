@@ -1,0 +1,17 @@
+.index_style
+  %h1 Edit menu
+  = form_for(@product) do |f|
+    .input_block
+      = f.label :name
+      %br
+      = f.text_field :name
+    .input_block
+      = f.label :description
+      %br
+      = f.text_field :description
+    .input_block
+      = f.label :price
+      %br
+      = f.text_field :price
+    .input_block
+      = f.submit
