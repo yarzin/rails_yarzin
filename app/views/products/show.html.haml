@@ -1,0 +1,18 @@
+.index_style
+  %p.show_text
+    %strong Name:
+    = @product.name
+  %p.show_text
+    %strong Description:
+    = @product.description
+  %p.show_text
+    %strong Price:
+    = @product.price
+  .links.links_inline
+    = link_to 'Edit', edit_product_path(@product)
+  |
+  .links.links_inline
+    = link_to 'Destroy', @product, method: :delete, data: { confirm: 'Are you sure?' }
+  |
+  .links.links_inline
+    = link_to 'Back', products_path

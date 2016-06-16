@@ -1,0 +1,17 @@
+.index_style
+  .h1 Your cart
+  %table.table.table-hover
+    %thead
+      %tr
+        %th Name
+        %th Description
+        %th Price
+    %tbody
+      - @products_in_cart.each do |product|
+        %tr
+          %td= product.name
+          %td= product.description
+          %td= product.price
+  %br
+  .links
+    = link_to 'Go to products list', products_path
