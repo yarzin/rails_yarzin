@@ -18961,3 +18961,11 @@ Processing by ProductsController#show as HTML
   [1m[35mProduct Load (0.4ms)[0m  SELECT  "products".* FROM "products" WHERE "products"."id" = $1 LIMIT 1  [["id", 1]]
   Rendered products/show.html.haml within layouts/application (0.6ms)
 Completed 200 OK in 64ms (Views: 62.6ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2016-06-16 16:50:06 +0300
+  [1m[36mActiveRecord::SchemaMigration Load (0.6ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by ProductsController#index as HTML
+  [1m[35mProduct Load (0.8ms)[0m  SELECT "products".* FROM "products"
+  Rendered products/index.html.haml within layouts/application (1539.0ms)
+Completed 200 OK in 1944ms (Views: 1845.9ms | ActiveRecord: 20.0ms)
