@@ -19160,3 +19160,11 @@ Processing by ProductsController#index as HTML
   [1m[35mProduct Load (57.5ms)[0m  SELECT "products".* FROM "products"
   Rendered products/index.html.haml within layouts/application (2509.2ms)
 Completed 200 OK in 2981ms (Views: 2619.7ms | ActiveRecord: 232.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2016-06-17 14:45:41 +0300
+  [1m[36mActiveRecord::SchemaMigration Load (1.6ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by ProductsController#index as HTML
+  [1m[35mProduct Load (26.2ms)[0m  SELECT "products".* FROM "products"
+  Rendered products/index.html.haml within layouts/application (978.0ms)
+Completed 200 OK in 1383ms (Views: 1270.2ms | ActiveRecord: 69.0ms)
