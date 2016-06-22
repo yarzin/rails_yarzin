@@ -42,13 +42,14 @@ group :development, :test do
   gem 'byebug'
   gem 'rspec-rails'
   gem 'factory_girl_rails'
+  gem 'faker'
+  gem 'capybara'
 end
 
 group :test do
-  gem 'capybara'
   gem 'database_cleaner'
   gem 'shoulda-matchers'
-  gem 'faker'
+
 
 end
 
