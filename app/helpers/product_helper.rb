@@ -4,4 +4,8 @@ module ProductHelper
     'alert-success' if key.to_sym == :destroy
   end
 
+  def products_list_partial_name
+
+  end
+
 end
