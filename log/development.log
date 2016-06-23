@@ -21190,3 +21190,27 @@ Started GET "/assets/product.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde
 
 
 Started GET "/assets/application.self-f8806224e027f3e3f0138ea9ce99319e298dfdb323304d1f1be6eae8e8c74724.js?body=1" for 127.0.0.1 at 2016-06-22 14:17:50 +0300
+
+
+Started GET "/" for 127.0.0.1 at 2016-06-23 10:33:25 +0300
+  [1m[36mActiveRecord::SchemaMigration Load (57.0ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by ProductsController#index as HTML
+  [1m[35mProduct Load (104.7ms)[0m  SELECT "products".* FROM "products"
+  Rendered products/index.html.haml within layouts/application (912.0ms)
+Completed 200 OK in 1429ms (Views: 1065.2ms | ActiveRecord: 291.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2016-06-23 10:49:58 +0300
+  [1m[36mActiveRecord::SchemaMigration Load (0.7ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by ProductsController#index as HTML
+  [1m[35mProduct Load (0.7ms)[0m  SELECT "products".* FROM "products"
+  Rendered products/index.html.haml within layouts/application (5920.5ms)
+Completed 200 OK in 6271ms (Views: 6182.3ms | ActiveRecord: 3.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2016-06-23 10:51:31 +0300
+  [1m[36mActiveRecord::SchemaMigration Load (0.6ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by ProductsController#index as HTML
+  [1m[35mProduct Load (0.6ms)[0m  SELECT "products".* FROM "products"
+  Rendered products/index.html.haml within layouts/application (214.1ms)
+Completed 200 OK in 322ms (Views: 304.1ms | ActiveRecord: 3.4ms)
