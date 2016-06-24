@@ -11,13 +11,13 @@
 
   .field
     = f.label :name, 'Name:'
-    = f.text_field :name
+    = f.text_field :name, class: 'form-control'
   .field
-    = f.label :description, 'Pescription:'
-    = f.text_field :description
+    = f.label :description, 'Description:'
+    = f.text_field :description, class: 'form-control'
   .field
     = f.label :price, 'Price:'
-    = f.number_field :price
+    = f.number_field :price, class: 'form-control'
   .actions
     = f.submit
 
