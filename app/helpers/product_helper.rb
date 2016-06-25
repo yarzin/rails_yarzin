@@ -4,8 +4,13 @@ module ProductHelper
     'alert-success' if key.to_sym == :destroy
   end
 
-  def products_list_partial_name
-
+  def product_list_partial_name
+    @products =  Product.all
+    if Product.all.empty?
+      return 'empty'
+    else
+      return 'list'
+    end
   end
 
 end
