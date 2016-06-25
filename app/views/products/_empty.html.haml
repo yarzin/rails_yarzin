@@ -1,0 +1,9 @@
+%h2= 'Oooopsss the list is empty'
+%h3= 'push on the pic to add some new product'
+
+.links.empty_box_pic
+  = link_to image_tag('empty_box.jpg', size: "90x60"), new_product_path
+
+%br
+= link_to 'Create new product', new_product_path, class: 'btn btn-default'
+= link_to 'All accounts', accounts_path, class: 'btn btn-info'

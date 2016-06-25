@@ -1,0 +1,23 @@
+.deport-form
+= form_for(@account) do |f|
+  - if @account.errors.any?
+    #error_explanation
+      %h2
+        = pluralize(@account.errors.count, "error")
+        prohibited this account from being saved:
+      %ul
+        - @account.errors.full_messages.each do |message|
+          %li= message
+
+  %fieldset
+  %legend Enter Account Details
+
+  .field
+    = f.label :name, 'Name:'
+    = f.text_field :name, size: 30
+    %br/
+  .field
+    = f.label :age, 'Age:'
+    = f.number_field :age, size: 30
+  .actions
+    = f.submit

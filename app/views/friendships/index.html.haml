@@ -1,0 +1,22 @@
+%p#notice= notice
+%h1 Listing Friendships
+%table
+  %thead
+    %tr
+      %th Account
+      %th Friend
+      %th Create
+      %th Destroy
+      %th{:colspan => "3"}
+  %tbody
+    - @friendships.each do |friendship|
+      %tr
+        %td= friendship.account_id
+        %td= friendship.friend_id
+        %td= friendship.create
+        %td= friendship.destroy
+        %td= link_to 'Show', friendship
+        %td= link_to 'Edit', edit_friendship_path(friendship)
+        %td= link_to 'Destroy', friendship, method: :delete, data: { confirm: 'Are you sure?' }
+%br/
+= link_to 'New Friendship', new_friendship_path
