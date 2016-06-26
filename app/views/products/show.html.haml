@@ -9,10 +9,8 @@
     %strong Price:
     = @product.price
   .links.links_inline
-    = link_to 'Edit', edit_product_path(@product)
-  |
-  .links.links_inline
-    = link_to 'Destroy', @product, method: :delete, data: { confirm: 'Are you sure?' }
-  |
-  .links.links_inline
-    = link_to 'Back', products_path
+    = link_to 'Edit', edit_product_path(@product), class: 'btn btn-success'
+    .links.links_inline
+    = link_to 'Destroy', @product, method: :delete, data: { confirm: 'You sure?' }, class: 'btn btn-danger'
+    .links.links_inline
+    = link_to 'Back', products_path, class: 'btn btn-primary'

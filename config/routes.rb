@@ -1,7 +1,5 @@
 Rails.application.routes.draw do
 
-  get 'carts/greet'
-
   resources :friendships
   resources :products
 
