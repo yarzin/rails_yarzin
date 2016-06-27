@@ -35,10 +35,6 @@ describe 'PUT update' do
 
     it 'updates the requested account' do
       post :create, account: {name:'Yaroslav', age: 28}
-      # Assuming there are no other users in the database, this
-      # specifies that the User created on the previous line
-      # receives the :update_attributes message with whatever params are
-      # submitted in the request.
       expect_any_instance_of(Account).to receive(:update).with({:name => "MyString" })
       put :update, {:id => account.to_param, :account => {:name => "MyString" }}
     end
