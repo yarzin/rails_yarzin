@@ -43383,3 +43383,218 @@ Processing by CartsController#show as HTML
   [1m[35mProduct Load (0.5ms)[0m  SELECT "products".* FROM "products" WHERE "products"."cart_id" = $1  [["cart_id", 1]]
   Rendered carts/show.html.haml within layouts/application (7.3ms)
 Completed 200 OK in 92ms (Views: 83.3ms | ActiveRecord: 1.8ms)
+
+
+Started GET "/products/11/edit" for 127.0.0.1 at 2016-06-26 16:25:32 +0300
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by ProductsController#edit as HTML
+  Parameters: {"id"=>"11"}
+  [1m[35mProduct Load (0.5ms)[0m  SELECT  "products".* FROM "products" WHERE "products"."id" = $1 LIMIT 1  [["id", 11]]
+  Rendered products/_form.html.haml (397.6ms)
+  Rendered products/edit.html.haml within layouts/application (402.5ms)
+Completed 200 OK in 723ms (Views: 693.4ms | ActiveRecord: 3.7ms)
+
+
+Started PATCH "/products/11" for 127.0.0.1 at 2016-06-26 16:25:34 +0300
+Processing by ProductsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"4AlmRh+bhWOr9+2Q0IdeRCDSW4o0P9+kwShVOy23zCE5kBbHCYb1ZuJWrpyCdAXrDlWMfWJFA0PNjmU04N9vFw==", "product"=>{"name"=>"ewqe", "description"=>"ewqeq", "price"=>"11.0"}, "commit"=>"Update Product", "id"=>"11"}
+  [1m[36mProduct Load (0.5ms)[0m  [1mSELECT  "products".* FROM "products" WHERE "products"."id" = $1 LIMIT 1[0m  [["id", 11]]
+  [1m[35m (0.3ms)[0m  BEGIN
+  [1m[36m (0.3ms)[0m  [1mCOMMIT[0m
+Redirected to http://localhost:3000/products/11
+Completed 302 Found in 8ms (ActiveRecord: 1.1ms)
+
+
+Started GET "/products/11" for 127.0.0.1 at 2016-06-26 16:25:34 +0300
+Processing by ProductsController#show as HTML
+  Parameters: {"id"=>"11"}
+  [1m[35mProduct Load (0.5ms)[0m  SELECT  "products".* FROM "products" WHERE "products"."id" = $1 LIMIT 1  [["id", 11]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "products".* FROM "products" WHERE "products"."id" = $1 LIMIT 1[0m  [["id", "11"]]
+  Rendered products/show.html.haml within layouts/application (3.7ms)
+Completed 200 OK in 79ms (Views: 76.6ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/products" for 127.0.0.1 at 2016-06-26 16:25:37 +0300
+Processing by ProductsController#index as HTML
+  [1m[35m (0.6ms)[0m  SELECT COUNT(*) FROM "products"
+  [1m[36mProduct Load (0.6ms)[0m  [1mSELECT "products".* FROM "products"[0m
+  Rendered products/_list.html.haml (6.4ms)
+  Rendered products/index.html.haml within layouts/application (15.6ms)
+Completed 200 OK in 95ms (Views: 92.6ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/coverage/index.html" for 127.0.0.1 at 2016-06-26 21:59:19 +0300
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+
+ActionController::RoutingError (No route matches [GET] "/coverage/index.html"):
+  actionpack (4.2.6) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  web-console (2.3.0) lib/web_console/middleware.rb:28:in `block in call'
+  web-console (2.3.0) lib/web_console/middleware.rb:18:in `catch'
+  web-console (2.3.0) lib/web_console/middleware.rb:18:in `call'
+  actionpack (4.2.6) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.6) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.6) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.6) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.6) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.6) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.6) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.6) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.4) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.4) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.6) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.6) lib/action_dispatch/middleware/static.rb:120:in `call'
+  rack (1.6.4) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.6) lib/rails/engine.rb:518:in `call'
+  railties (4.2.6) lib/rails/application.rb:165:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  rack (1.6.4) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.4) lib/rack/handler/webrick.rb:88:in `service'
+  /home/yarzin/.rvm/rubies/ruby-2.3.0/lib/ruby/2.3.0/webrick/httpserver.rb:140:in `service'
+  /home/yarzin/.rvm/rubies/ruby-2.3.0/lib/ruby/2.3.0/webrick/httpserver.rb:96:in `run'
+  /home/yarzin/.rvm/rubies/ruby-2.3.0/lib/ruby/2.3.0/webrick/server.rb:296:in `block in start_thread'
+
+
+  Rendered /home/yarzin/.rvm/gems/ruby-2.3.0@first_app/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.5ms)
+  Rendered /home/yarzin/.rvm/gems/ruby-2.3.0@first_app/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/routes/_route.html.erb (2.4ms)
+  Rendered /home/yarzin/.rvm/gems/ruby-2.3.0@first_app/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/routes/_table.html.erb (4.6ms)
+  Rendered /home/yarzin/.rvm/gems/ruby-2.3.0@first_app/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (30.7ms)
+  Rendered /home/yarzin/.rvm/gems/ruby-2.3.0@first_app/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (83.9ms)
+  Rendered /home/yarzin/.rvm/gems/ruby-2.3.0@first_app/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.4ms)
+  Rendered /home/yarzin/.rvm/gems/ruby-2.3.0@first_app/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /home/yarzin/.rvm/gems/ruby-2.3.0@first_app/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /home/yarzin/.rvm/gems/ruby-2.3.0@first_app/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.4ms)
+  Rendered /home/yarzin/.rvm/gems/ruby-2.3.0@first_app/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (450.2ms)
+  Rendered /home/yarzin/.rvm/gems/ruby-2.3.0@first_app/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.3ms)
+  Rendered /home/yarzin/.rvm/gems/ruby-2.3.0@first_app/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.5ms)
+  Rendered /home/yarzin/.rvm/gems/ruby-2.3.0@first_app/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (471.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2016-06-27 23:15:51 +0300
+  [1m[36mActiveRecord::SchemaMigration Load (1.0ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by ProductsController#index as HTML
+  [1m[35m (27.1ms)[0m  SELECT COUNT(*) FROM "products"
+  [1m[36mProduct Load (0.6ms)[0m  [1mSELECT "products".* FROM "products"[0m
+  Rendered products/_list.html.haml (75.2ms)
+  Rendered products/index.html.haml within layouts/application (989.4ms)
+Completed 200 OK in 1727ms (Views: 1542.0ms | ActiveRecord: 108.3ms)
+
+
+Started DELETE "/products/11" for 127.0.0.1 at 2016-06-27 23:15:58 +0300
+Processing by ProductsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"VLAIQUzkjnvVKnftamZPXboQjRTpZY5oQ9xllRxLnUKNKXjAWvn+fpyLNOE4lRTylJda478fUo9PelWa0SM+dA==", "id"=>"11"}
+  [1m[35mProduct Load (37.5ms)[0m  SELECT  "products".* FROM "products" WHERE "products"."id" = $1 LIMIT 1  [["id", 11]]
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (7.0ms)[0m  DELETE FROM "products" WHERE "products"."id" = $1  [["id", 11]]
+  [1m[36m (48.5ms)[0m  [1mCOMMIT[0m
+Redirected to http://localhost:3000/products
+Completed 302 Found in 127ms (ActiveRecord: 93.6ms)
+
+
+Started GET "/products" for 127.0.0.1 at 2016-06-27 23:15:58 +0300
+Processing by ProductsController#index as HTML
+  [1m[35m (0.5ms)[0m  SELECT COUNT(*) FROM "products"
+  Rendered products/_empty.html.haml (53.0ms)
+  Rendered products/index.html.haml within layouts/application (78.7ms)
+Completed 200 OK in 178ms (Views: 176.9ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2016-06-27 23:16:08 +0300
+Processing by ProductsController#index as HTML
+  [1m[36m (0.9ms)[0m  [1mSELECT COUNT(*) FROM "products"[0m
+  Rendered products/_empty.html.haml (2.4ms)
+  Rendered products/index.html.haml within layouts/application (10.4ms)
+Completed 200 OK in 156ms (Views: 154.1ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/assets/carts.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2016-06-27 23:16:09 +0300
+
+
+Started GET "/assets/accounts.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2016-06-27 23:16:09 +0300
+
+
+Started GET "/assets/scaffolds.self-f65041d1d481c770f8628ba986ee5a5e83672a855bfcf0fe69bf884ed10f61ed.css?body=1" for 127.0.0.1 at 2016-06-27 23:16:09 +0300
+
+
+Started GET "/assets/product.self-2bb6c3211fe7fda830d756a9af442e4af8dcebc1780b7fc4fd5a5714524ed8a4.css?body=1" for 127.0.0.1 at 2016-06-27 23:16:09 +0300
+
+
+Started GET "/assets/custom.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2016-06-27 23:16:09 +0300
+
+
+Started GET "/assets/friendships.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2016-06-27 23:16:09 +0300
+
+
+Started GET "/assets/jquery.self-660adc51e0224b731d29f575a6f1ec167ba08ad06ed5deca4f1e8654c135bf4c.js?body=1" for 127.0.0.1 at 2016-06-27 23:16:09 +0300
+
+
+Started GET "/assets/application.self-82cf7a2ea15f75f11a5ff9a1ed3b6193f8d4bc1cb0e202018657f5fe4562287e.css?body=1" for 127.0.0.1 at 2016-06-27 23:16:09 +0300
+
+
+Started GET "/assets/bootstrap/alert.self-d8b7bd612b3dcfdefb7b5539b9d5848d66ccbd3e7af8bb8d48bfb3288aaa7be8.js?body=1" for 127.0.0.1 at 2016-06-27 23:16:09 +0300
+
+
+Started GET "/assets/bootstrap/button.self-e74d33ba39500940a78d6fa4d2d64f6ca7fd86d60a2149641f7fde7ba711d8a1.js?body=1" for 127.0.0.1 at 2016-06-27 23:16:09 +0300
+
+
+Started GET "/assets/bootstrap/affix.self-3555752f8a930795ee9e56751a52e6871104ae85d01b3ab8363da3802a5ecc78.js?body=1" for 127.0.0.1 at 2016-06-27 23:16:09 +0300
+
+
+Started GET "/assets/bootstrap/carousel.self-35d204878d906298e55bc24553e11fd89b980fc4ffe5792fe36af8c0da289c54.js?body=1" for 127.0.0.1 at 2016-06-27 23:16:09 +0300
+
+
+Started GET "/assets/bootstrap/collapse.self-056c40532d9f0f126ec17e839f60c942f573fbd61a086e7f156306e3fc5e8c1f.js?body=1" for 127.0.0.1 at 2016-06-27 23:16:09 +0300
+
+
+Started GET "/assets/bootstrap/modal.self-62463080dba6b9d024ff0a3192da0e76eacbc683194f3395047c6f5cfa0acb59.js?body=1" for 127.0.0.1 at 2016-06-27 23:16:09 +0300
+
+
+Started GET "/assets/bootstrap/dropdown.self-e56c2ffee4618411d43ecf15c89273f6223847ad756e1cd17545d04afa732ed4.js?body=1" for 127.0.0.1 at 2016-06-27 23:16:09 +0300
+
+
+Started GET "/assets/bootstrap/scrollspy.self-52afd90e8ba97d9f08617a13986e8869d6c4a45751c0bff59a6f91241e722aca.js?body=1" for 127.0.0.1 at 2016-06-27 23:16:09 +0300
+
+
+Started GET "/assets/bootstrap/tab.self-dad0d5c377f9fae26394484535ebb23ccf68afae084f896af6ea4cdf8c9f6ae0.js?body=1" for 127.0.0.1 at 2016-06-27 23:16:09 +0300
+
+
+Started GET "/assets/bootstrap/transition.self-3b268d4cd8c79e46ded7392885f72f64ffb5b0d49948a12b8cf9779f6163e13a.js?body=1" for 127.0.0.1 at 2016-06-27 23:16:09 +0300
+
+
+Started GET "/assets/bootstrap-sprockets.self-fbfa5ad7d9aa0afe439ec4ff3883acc4cb92b62cb67c40d674320c9aa1d4642d.js?body=1" for 127.0.0.1 at 2016-06-27 23:16:09 +0300
+
+
+Started GET "/assets/bootstrap/tooltip.self-facdc69246a072acb927ded77ff655f7c27a518b9357fddd45d119fbc8a0ab9f.js?body=1" for 127.0.0.1 at 2016-06-27 23:16:09 +0300
+
+
+Started GET "/assets/bootstrap/popover.self-210cff1fb4b72b71a29b5122180cb5937c8145cd13a934dc838280f1d9607a3e.js?body=1" for 127.0.0.1 at 2016-06-27 23:16:09 +0300
+
+
+Started GET "/assets/jquery_ujs.self-e87806d0cf4489aeb1bb7288016024e8de67fd18db693fe026fe3907581e53cd.js?body=1" for 127.0.0.1 at 2016-06-27 23:16:09 +0300
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for 127.0.0.1 at 2016-06-27 23:16:09 +0300
+
+
+Started GET "/assets/accounts.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-06-27 23:16:09 +0300
+
+
+Started GET "/assets/friendships.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-06-27 23:16:09 +0300
+
+
+Started GET "/assets/carts.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-06-27 23:16:09 +0300
+
+
+Started GET "/assets/product.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-06-27 23:16:09 +0300
+
+
+Started GET "/assets/application.self-f8806224e027f3e3f0138ea9ce99319e298dfdb323304d1f1be6eae8e8c74724.js?body=1" for 127.0.0.1 at 2016-06-27 23:16:09 +0300
+
+
+Started GET "/assets/empty_box-f05f286fe118c30783d27ef5ff4fb4689ff16f070ba9bde6bf7d69014b96e33c.jpg" for 127.0.0.1 at 2016-06-27 23:16:09 +0300
+
+
+Started GET "/assets/cart-8cc483f80e5366fc46e58cc693069ef9f754ebc81c19c2ebcda949e2747f79c8.gif" for 127.0.0.1 at 2016-06-27 23:16:09 +0300
+
+
+Started GET "/assets/empty_box-f05f286fe118c30783d27ef5ff4fb4689ff16f070ba9bde6bf7d69014b96e33c.jpg" for 127.0.0.1 at 2016-06-27 23:16:09 +0300

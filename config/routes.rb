@@ -7,8 +7,6 @@ Rails.application.routes.draw do
 
   resource :cart, only: :show
 
-  get 'cart', to: 'cart#show'
-
 
   resources :accounts
   # The priority is based upon order of creation: first created -> highest priority.

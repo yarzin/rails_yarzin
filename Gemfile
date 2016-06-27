@@ -46,6 +46,7 @@ group :development, :test do
   gem 'faker'
   gem 'capybara'
   gem 'simplecov', :require => false
+
 end
 
 group :test do
