@@ -1,18 +1,24 @@
 Rails.application.routes.draw do
 
+  devise_for :users
+
   resources :friendships
   resources :products
 
   post '/carts/add_product', to: 'carts#add', as: 'add_to_cart'
 
   resource :cart, only: :show
+  #  collection do
+  #    get 'order'
 
+  #end
 
   resources :accounts
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
   # You can have the root of your site routed with "root"
+
   root 'products#index'
 
   # Example of regular route:
@@ -63,4 +69,5 @@ Rails.application.routes.draw do
   #     # (app/controllers/admin/products_controller.rb)
   #     resources :products
   #   end
+
 end

@@ -10,13 +10,13 @@
           %li= msg
 
   .field
-    = f.label :name, 'Name:'
+    = f.label :name, t('product.name')
     = f.text_field :name, class: 'form-control'
   .field
-    = f.label :description, 'Description:'
+    = f.label :description, t('product.description')
     = f.text_field :description, class: 'form-control'
   .field
-    = f.label :price, 'Price:'
+    = f.label :price, t('product.price')
     = f.number_field :price, class: 'form-control'
   .actions
     = f.submit

@@ -20,4 +20,61 @@
 # available at http://guides.rubyonrails.org/i18n.html.
 
 en:
-  hello: "Hello world"
+  msg_create: "Product was successfully created"
+  msg_update: "Product was successfully updated"
+  msg_destroy: "Product was destroyed"
+  msg_create_acc: "Account was successfully created."
+  msg_update_acc: 'Account was successfully updated.'
+  msg_destroy_acc: 'Account was successfully destroyed.'
+  buttons:
+    button_show: "show"
+    button_edit: "edit"
+    button_destroy: "destroy"
+    button_add_cart: "add to cart"
+    button_create_product: "Create new product"
+    button_all_accounts: "All accounts"
+    button_back: "Back"
+    button_go_product_list: "Go to products list"
+  links:
+      link_new_account: "Create new account"
+      link_back_product_list: "Back to products list"
+  h1:
+      product_list: "Products list"
+      account_list: "Listing Accounts"
+      new_product: "New Product"
+      new_account: "New account"
+      account_details: "Enter Account Details"
+      cart: "Your cart"
+  product:
+      name: "Name"
+      description: "Description"
+      price: "Price"
+  account:
+      name: "Name"
+      age: "Age"
+  activerecord:
+        models:
+          account: "User"
+          product: "Product"
+        attributes:
+          account:
+            name: "Name"
+            age: "Age"
+        errors:
+          template:
+            header:
+              one: "1 error present in  %{model}"
+              other: "%{count} errors in %{model}"
+            body: "Are you having the following errors:"
+          models:
+            account:
+              attributes:
+                name:
+                  blank: "not be empty"
+                  too_short: "must be at least %{count} characters"
+                  invalid: "must contain only letters"
+                age:
+                  blank: "not be empty"
+                  not_a_number: "should be only numerical"
+                  greater_than_or_equal_to: "must be > %{count}"
+                  less_than_or_equal_to: "must be < %{count}"

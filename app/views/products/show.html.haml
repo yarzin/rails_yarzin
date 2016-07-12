@@ -9,8 +9,8 @@
     %strong Price:
     = @product.price
   .links.links_inline
-    = link_to 'Edit', edit_product_path(@product), class: 'btn btn-success'
+    = link_to t('buttons.button_edit'), edit_product_path(@product), class: 'btn btn-success'
     .links.links_inline
-    = link_to 'Destroy', @product, method: :delete, data: { confirm: 'You sure?' }, class: 'btn btn-danger'
+    = link_to t('buttons.button_destroy'), @product, method: :delete, data: { confirm: 'You sure?' }, class: 'btn btn-danger'
     .links.links_inline
-    = link_to 'Back', products_path, class: 'btn btn-primary'
+    = link_to t('buttons.button_back'), products_path, class: 'btn btn-info'

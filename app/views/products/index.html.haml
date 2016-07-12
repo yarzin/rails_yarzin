@@ -1,7 +1,7 @@
 .index_style
   - flash.each do |key, value|
     .alert{role: "alert", class: colored_class(key)}= value
-  %h1= 'Products list'
+  %h1= t('h1.product_list')
   .links.cart_pic
     = link_to image_tag('cart.gif', size: "90x60"), cart_path
 

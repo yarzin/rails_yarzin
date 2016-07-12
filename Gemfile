@@ -25,8 +25,10 @@ gem 'jbuilder', '~> 2.0'
 gem 'sdoc', '~> 0.4.0', group: :doc
 gem 'pry'
 gem 'haml'
-
+gem 'rails-i18n', '~> 4.0.0'
 gem 'bootstrap-sass', '~> 3.3.6'
+gem 'dynamic_form'
+gem 'devise'
 
 
 # Use ActiveModel has_secure_password
@@ -46,7 +48,7 @@ group :development, :test do
   gem 'faker'
   gem 'capybara'
   gem 'simplecov', :require => false
-
+  gem 'coveralls', require: false
 end
 
 group :test do

@@ -8,4 +8,8 @@
     = javascript_include_tag 'application', 'data-turbolinks-track' => true
     = csrf_meta_tags
   %body
+    .I18n_link
+    = link_to 'EN', '?locale=en'
+    = link_to 'UA', '?locale=ua'
+    = link_to 'PL', '?locale=pl'
     = yield

@@ -10,14 +10,14 @@
           %li= message
 
   %fieldset
-  %legend Enter Account Details
+  %legend= t('h1.account_details')
 
   .field
-    = f.label :name, 'Name:'
+    = f.label :name, t('account.name')
     = f.text_field :name, size: 30
     %br/
   .field
-    = f.label :age, 'Age:'
+    = f.label :age, t('account.age')
     = f.number_field :age, size: 30
   .actions
     = f.submit

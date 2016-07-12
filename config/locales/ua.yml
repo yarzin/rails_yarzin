@@ -1,0 +1,59 @@
+ua:
+  msg_create: "Продукт успішно створенний"
+  msg_update: "Продукт успішно оновленний"
+  msg_destroy: "Продукт успішно видаленний"
+  msg_create_acc: "Аккаунт успішно створенний"
+  msg_update_acc: 'Аккаунт успішно оновленний'
+  msg_destroy_acc: 'Аккаунт успішно знищенний'
+  buttons:
+    button_show: "показати"
+    button_edit: "правка"
+    button_destroy: "знищити"
+    button_add_cart: "Добавити в корзину"
+    button_create_product: "Створити новий продукт"
+    button_all_accounts: "Всі аккаунти"
+    button_back: "Назад"
+    button_go_product_list: "Перейти в список продуктів"
+  links:
+    link_new_account: "Створити новий аккаунт"
+    link_back_product_list: "Назад до списку продуктів"
+  h1:
+    product_list: "Список продуктів"
+    account_list: "Список акаунтів"
+    new_product: "Новий продукт"
+    new_account: "Новий аккаунт"
+    account_details: "Веддіть данні аккаунта"
+    cart: "Ваша корзина"
+  product:
+    name: "Найменування"
+    description: "Опис"
+    price: "Ціна"
+  account:
+        name: "Імя"
+        age: "Вік"
+  activerecord:
+      models:
+        account: "аккаунт"
+        product: "Продукт"
+      attributes:
+        account:
+          name: "Імя"
+          age: "Вік"
+      errors:
+        template:
+          header:
+            one: "1 помилка присутня в  %{model}"
+            other: "%{count} помилок у %{model}"
+          body: "У вас виникли наступні помилки:"
+        models:
+          account:
+            attributes:
+              name:
+                blank: "неможе бути пустим"
+                too_short: "має бути не менше %{count} символів"
+                invalid: "повинно містити тільки літери"
+              age:
+                blank: "неможе бути пустим"
+                not_a_number: "має бути тільки числовим"
+                greater_than_or_equal_to: "має бути > %{count}"
+                less_than_or_equal_to: "має бути < %{count}"

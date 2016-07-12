@@ -19,6 +19,9 @@
 require 'simplecov'
 SimpleCov.start 'rails'
 
+require 'coveralls'
+Coveralls.wear!
+
 require 'shoulda/matchers'
 require 'factory_girl'
 RSpec.configure do |config|

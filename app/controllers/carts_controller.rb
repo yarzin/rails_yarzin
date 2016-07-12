@@ -1,4 +1,6 @@
 class CartsController < ApplicationController
+  #before_filter :authenticate_user!, except => [:show, :index]
+
   def show
     @products_in_cart = Product.where(cart_id: session[:cart_id])
   end
@@ -7,3 +9,4 @@ class CartsController < ApplicationController
     Cart.find(session[:cart_id]).products << Product.find(params[:product_id])
   end
 end
+

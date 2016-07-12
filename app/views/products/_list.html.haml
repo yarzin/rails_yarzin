@@ -1,16 +1,21 @@
-%h2= 'Products list'
+%h2= t('h1.product_list')
 
 %table.table.table-hover
   - @products.each do |product|
+    %thead
+      %tr
+        %th= t('product.name')
+        %th= t('product.description')
+        %th= t('product.price')
     %tr
       %td= product.name
       %td= product.description
       %td= product.price
-      %td= link_to 'Show', product, class: 'btn btn-default btn-sm'
-      %td= link_to 'Edit', edit_product_path(product), class: 'btn btn-default btn-sm'
-      %td= link_to 'Destroy', product, method: :delete, data: { confirm: 'Are you sure?' }, class: 'btn btn-default btn-sm'
-      %td= button_to 'add to cart', add_to_cart_path(product_id: product.id), remote: true
+      %td= link_to t('buttons.button_show'), product, class: 'btn btn-default btn-sm'
+      %td= link_to t('buttons.button_edit'), edit_product_path(product), class: 'btn btn-default btn-sm'
+      %td= link_to t('buttons.button_destroy'), product, method: :delete, data: { confirm: 'Are you sure?' }, class: 'btn btn-default btn-sm'
+      %td= button_to t('buttons.button_add_cart'), add_to_cart_path(product_id: product.id), remote: true
 
 %br
-= link_to 'Create new product', new_product_path, class: 'btn btn-success'
-= link_to 'All accounts', accounts_path, class: 'btn btn-info'
+= link_to t('buttons.button_create_product'), new_product_path, class: 'btn btn-success'
+= link_to t('buttons.button_all_accounts'), accounts_path, class: 'btn btn-info'
