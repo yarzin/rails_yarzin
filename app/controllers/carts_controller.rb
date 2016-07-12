@@ -1,5 +1,5 @@
 class CartsController < ApplicationController
-  before_action :authenticate_user!, except: [:index]
+  #before_action :authenticate_user!, except: [:index]
 
   def show
     @products_in_cart = Product.where(cart_id: session[:cart_id])
