@@ -5,13 +5,15 @@ Rails.application.routes.draw do
   resources :friendships
   resources :products
 
+  resource :cart, only: :show do
+    collection do
+      get 'confirm'
+    end
+  end
+
   post '/carts/add_product', to: 'carts#add', as: 'add_to_cart'
-
-  resource :cart, only: :show
-  #  collection do
-  #    get 'order'
-
-  #end
+  delete '/carts/remove_product', to: 'carts#remove', as: 'remove_from_cart'
+  match '/send_order', to: 'carts#send_order', via: 'post'
 
   resources :accounts
   # The priority is based upon order of creation: first created -> highest priority.

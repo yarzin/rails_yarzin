@@ -1,3 +1,4 @@
+
 %form.form-inline
   %br
   .form-group
@@ -6,3 +7,4 @@
     %input#exampleInputEmail2.form-control{:placeholder => "test@example.com", :type => "email"}
   %br
   %button.btn.btn-default{:type => "submit"} Confirm order
+  = link_to 'Send', send_order_path
