@@ -1,0 +1,59 @@
+pl:
+  msg_create: "Product was successfully created"
+  msg_update: "Product was successfully updated"
+  msg_destroy: "Product was destroyed"
+  msg_create_acc: "Account was successfully created."
+  msg_update_acc: 'Account was successfully updated.'
+  msg_destroy_acc: 'Account was successfully destroyed.'
+  buttons:
+    button_show: "pokaz"
+    button_edit: "Zmień"
+    button_destroy: "wytrzeć"
+    button_add_cart: "Dodaj do koszyka"
+    button_create_product: "Utwórz nowy produkt"
+    button_all_accounts: "Wszystkie rachunki"
+    button_back: "wstecz"
+    button_go_product_list: "Przejdź do listy produktów"
+  links:
+    link_new_account: "Utwórz nowe akk"
+    link_back_product_list: "wstecz do listy produktów"
+  h1:
+    product_list: "Lista produktów"
+    account_list: "lista kont"
+    new_product: "Nowy produkt"
+    new_account: "Nowe konto"
+    account_details: "Wprowadź konto"
+    cart: "Twój koszyk"
+  product:
+    name: "nazwa"
+    description: "opis"
+    price: "cena"
+  account:
+        name: "imię"
+        age: "wiek"
+  activerecord:
+      models:
+        account: "konto"
+        product: "produkt"
+      attributes:
+        account:
+          name: "imię"
+          age: "wiek"
+      errors:
+        template:
+          header:
+            one: "1 błąd występuje w  %{model}"
+            other: "%{count} błędy %{model}"
+          body: "Czy masz następujące błędy:"
+        models:
+          account:
+            attributes:
+              name:
+                blank: "nie może być pusty"
+                too_short: "musi wynosić co najmniej %{count} symbolika"
+                invalid: "musi zawierać tylko litery"
+              age:
+                blank: "nie może być pusty"
+                not_a_number: "powinny być tylko numeryczne"
+                greater_than_or_equal_to: "musi być > %{count}"
+                less_than_or_equal_to: "musi być < %{count}"
