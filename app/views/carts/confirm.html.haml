@@ -8,4 +8,4 @@
   .actions
     = submit_tag 'confirm order'
 
-  = button_to 'back to cart', cart_path, method: :get
+  = link_to 'Back to cart', cart_path, method: :get, class: 'btn btn-default btn-sm'
