@@ -1,10 +1,11 @@
+%h1= "Confirm you order"
 
-%form.form-inline
-  %br
+= form_tag send_order_path do
   .form-group
-    %label{:for => "exampleInputEmail2"} Email
-  %br
-    %input#exampleInputEmail2.form-control{:placeholder => "test@example.com", :type => "email"}
-  %br
-  %button.btn.btn-default{:type => "submit"} Confirm order
-  = link_to 'Send', send_order_path
+    = label_tag :email, 'put your email'
+    %br
+    = text_field_tag :email
+  .actions
+    = submit_tag 'confirm order'
+
+  = button_to 'back to cart', cart_path, method: :get
