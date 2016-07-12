@@ -1,16 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="91793e11-9266-47df-9875-e8d275d3537a" name="Default" comment="add I18n and Devise gem">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/mailers/cart_mailer.rb" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/views/carts/confirm.html.haml" afterPath="" />
+    <list default="true" id="91793e11-9266-47df-9875-e8d275d3537a" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/carts_controller.rb" afterPath="$PROJECT_DIR$/app/controllers/carts_controller.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/products_controller.rb" afterPath="$PROJECT_DIR$/app/controllers/products_controller.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/models/account.rb" afterPath="$PROJECT_DIR$/app/models/account.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/carts/show.html.haml" afterPath="$PROJECT_DIR$/app/views/carts/show.html.haml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config/routes.rb" afterPath="$PROJECT_DIR$/config/routes.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/log/development.log" afterPath="$PROJECT_DIR$/log/development.log" />
     </list>
     <ignored path="rails_yarzin.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -983,7 +975,7 @@
       <workItem from="1468335302352" duration="635000" />
       <workItem from="1468340421183" duration="87000" />
       <workItem from="1468341514718" duration="1647000" />
-      <workItem from="1468349625987" duration="748000" />
+      <workItem from="1468349625987" duration="791000" />
     </task>
     <task id="LOCAL-00001" summary="some changes whith bd">
       <created>1465810801892</created>
@@ -1251,7 +1243,14 @@
       <option name="project" value="LOCAL" />
       <updated>1468311740015</updated>
     </task>
-    <option name="localTasksCounter" value="39" />
+    <task id="LOCAL-00039" summary="some fix whith mailers">
+      <created>1468350395178</created>
+      <option name="number" value="00039" />
+      <option name="presentableId" value="LOCAL-00039" />
+      <option name="project" value="LOCAL" />
+      <updated>1468350395178</updated>
+    </task>
+    <option name="localTasksCounter" value="40" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -1287,7 +1286,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="294001000" />
+    <option name="totallyTimeSpent" value="294044000" />
   </component>
   <component name="TodoView" selected-index="4">
     <todo-panel id="selected-file">
@@ -1304,7 +1303,7 @@
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24940239" sideWeight="0.5" order="1" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3564516" sideWeight="0.48446214" order="10" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.22903226" sideWeight="0.4685259" order="0" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.31129032" sideWeight="0.4685259" order="0" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.6951613" sideWeight="0.49083665" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.37419355" sideWeight="0.5314741" order="5" side_tool="false" content_ui="tabs" />
@@ -1359,7 +1358,8 @@
     <MESSAGE value="some little change" />
     <MESSAGE value="add spec test for controller" />
     <MESSAGE value="add I18n and Devise gem" />
-    <option name="LAST_COMMIT_MESSAGE" value="add I18n and Devise gem" />
+    <MESSAGE value="some fix whith mailers" />
+    <option name="LAST_COMMIT_MESSAGE" value="some fix whith mailers" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
