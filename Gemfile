@@ -29,7 +29,7 @@ gem 'rails-i18n', '~> 4.0.0'
 gem 'bootstrap-sass', '~> 3.3.6'
 gem 'dynamic_form'
 gem 'devise'
-
+gem 'paperclip'
 
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'

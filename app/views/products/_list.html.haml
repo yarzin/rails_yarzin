@@ -8,6 +8,7 @@
         %th= t('product.description')
         %th= t('product.price')
     %tr
+      %td= image_tag product.image.url(:thumb)
       %td= product.name
       %td= product.description
       %td= product.price

@@ -1,4 +1,6 @@
 .index_style
+  .product_image
+    = image_tag @product.image.url(:medium)
   %p.show_text
     %strong Name:
     = @product.name
