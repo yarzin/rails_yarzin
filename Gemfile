@@ -30,7 +30,7 @@ gem 'bootstrap-sass', '~> 3.3.6'
 gem 'dynamic_form'
 gem 'devise'
 gem 'paperclip'
-gem 'omniauth'
+gem 'omniauth-oauth2'
 gem "omniauth-google-oauth2"
 
 # Use ActiveModel has_secure_password
