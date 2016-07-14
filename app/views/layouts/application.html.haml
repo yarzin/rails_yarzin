@@ -8,6 +8,13 @@
     = javascript_include_tag 'application', 'data-turbolinks-track' => true
     = csrf_meta_tags
   %body
+    .log_out
+  - if user_signed_in?
+    = link_to 'Log out', destroy_user_session_path, method: :delete
+  - else
+    = link_to 'Log in', new_user_session_path
+    .google
+    = link_to "Sign in with Google", user_google_oauth2_omniauth_authorize_path
     .I18n_link
     = link_to 'EN', '?locale=en'
     = link_to 'UA', '?locale=ua'

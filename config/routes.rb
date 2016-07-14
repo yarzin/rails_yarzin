@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
 
-  devise_for :users
+  devise_for :users, :controllers => { :omniauth_callbacks => "users/omniauth_callbacks" }
 
   resources :friendships
   resources :products
@@ -16,6 +16,8 @@ Rails.application.routes.draw do
   match '/send_order', to: 'carts#send_order', via: 'post'
 
   resources :accounts
+
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
