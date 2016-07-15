@@ -1,7 +1,5 @@
 *.rbc
 capybara-*.html
-.idea
-/idea
 .rspec
 /log
 /tmp
@@ -43,4 +41,3 @@ bower.json
 
 # Ignore Byebug command history file.
 .byebug_history
-spec/features/
