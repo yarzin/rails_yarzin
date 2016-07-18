@@ -1,1 +1,1 @@
-[![Coverage Status](https://coveralls.io/repos/github/yarzin/rails_yarzin/badge.svg?branch=master)](https://coveralls.io/github/yarzin/rails_yarzin?branch=master)
+{<img src="https://coveralls.io/repos/github/yarzin/rails_yarzin/badge.svg?branch=master" alt="Coverage Status" />}[https://coveralls.io/github/yarzin/rails_yarzin?branch=master]
