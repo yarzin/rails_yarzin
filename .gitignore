@@ -41,3 +41,21 @@ bower.json
 
 # Ignore Byebug command history file.
 .byebug_history
+.ruby-version
+app/mailers/application_mailer.rb
+app/mailers/cart_mailer.rb
+app/models/user.rb
+app/views/cart_mailer/
+app/views/devise/
+app/views/layouts/mailer.html.erb
+app/views/layouts/mailer.text.erb
+config/initializers/devise.rb
+config/initializers/omniauth.rb
+config/locales/devise.en.yml
+config/locales/pl.yml
+db/migrate/20160717135612_devise_create_users.rb
+db/migrate/20160718064028_add_attachment_image_to_products.rb
+spec/factories/users.rb
+spec/features/
+spec/mailers/
+spec/models/user_spec.rb
