@@ -33,7 +33,9 @@ gem 'devise'
 gem 'paperclip'
 gem 'omniauth'
 gem "omniauth-google-oauth2"
+gem 'devise-bootstrap-views'
 
+gem 'coveralls', require: false
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 
@@ -51,7 +53,7 @@ group :development, :test do
   gem 'faker'
   gem 'capybara'
   gem 'simplecov', :require => false
-  gem 'coveralls', require: false
+
 end
 
 group :test do
