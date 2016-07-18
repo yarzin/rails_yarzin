@@ -3,6 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="91793e11-9266-47df-9875-e8d275d3537a" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/README.rdoc" afterPath="$PROJECT_DIR$/README.rdoc" />
     </list>
     <ignored path="rails_yarzin.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -100,8 +101,8 @@
       <file leaf-file-name="README.rdoc" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/README.rdoc">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="178" selection-start-line="0" selection-start-column="178" selection-end-line="0" selection-end-column="178" />
+            <state relative-caret-position="18">
+              <caret line="1" column="137" selection-start-line="1" selection-start-column="137" selection-end-line="1" selection-end-column="137" />
               <folding />
             </state>
           </provider>
@@ -893,14 +894,7 @@
       <workItem from="1468598696685" duration="6358000" />
       <workItem from="1468853292816" duration="1707000" />
       <workItem from="1468859137753" duration="5352000" />
-      <workItem from="1468866165992" duration="4921000" />
-    </task>
-    <task id="LOCAL-00016" summary="add .gitignore">
-      <created>1466106647782</created>
-      <option name="number" value="00016" />
-      <option name="presentableId" value="LOCAL-00016" />
-      <option name="project" value="LOCAL" />
-      <updated>1466106647782</updated>
+      <workItem from="1468866165992" duration="5163000" />
     </task>
     <task id="LOCAL-00017" summary="add .gitignore">
       <created>1466164144818</created>
@@ -1238,7 +1232,14 @@
       <option name="project" value="LOCAL" />
       <updated>1468871225179</updated>
     </task>
-    <option name="localTasksCounter" value="65" />
+    <task id="LOCAL-00065" summary="add coverage">
+      <created>1468871237369</created>
+      <option name="number" value="00065" />
+      <option name="presentableId" value="LOCAL-00065" />
+      <option name="project" value="LOCAL" />
+      <updated>1468871237369</updated>
+    </task>
+    <option name="localTasksCounter" value="66" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -1274,7 +1275,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="349226000" />
+    <option name="totallyTimeSpent" value="349468000" />
   </component>
   <component name="TodoView" selected-index="4">
     <todo-panel id="selected-file">
@@ -1723,8 +1724,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/README.rdoc">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="178" selection-start-line="0" selection-start-column="178" selection-end-line="0" selection-end-column="178" />
+        <state relative-caret-position="18">
+          <caret line="1" column="137" selection-start-line="1" selection-start-column="137" selection-end-line="1" selection-end-column="137" />
           <folding />
         </state>
       </provider>
