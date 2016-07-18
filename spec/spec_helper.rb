@@ -16,11 +16,13 @@
 # users commonly want.
 #
 # See http://rubydoc.info/gems/rspec-core/RSpec/Core/Configuration
+require 'coveralls'
+Coveralls.wear!
+
 require 'simplecov'
 SimpleCov.start 'rails'
 
-require 'coveralls'
-Coveralls.wear!
+
 
 require 'shoulda/matchers'
 require 'factory_girl'
