@@ -21,7 +21,10 @@ ActiveRecord::Schema.define(version: 20160713190145) do
     t.integer  "age"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.integer  "user_id"
   end
+
+  add_index "accounts", ["user_id"], name: "index_accounts_on_user_id", using: :btree
 
   create_table "carts", force: :cascade do |t|
     t.integer  "account_id"

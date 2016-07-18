@@ -12,7 +12,7 @@ default: &default
 
 development:
   <<: *default
-  database: rails_development
+  database: rails_development11
   username: rails_app
   password: pass123
 
@@ -21,12 +21,12 @@ development:
 # Do not set this db to the same as development or production.
 test:
   <<: *default
-  database: rails_test
+  database: rails_test11
   username: rails_app
   password: pass123
 
 production:
   <<: *default
-  database: rails_production
+  database: rails_production11
   username: rails_app
   password: pass123
