@@ -3,7 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="91793e11-9266-47df-9875-e8d275d3537a" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/README.rdoc" afterPath="$PROJECT_DIR$/README.rdoc" />
     </list>
     <ignored path="rails_yarzin.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -894,14 +893,7 @@
       <workItem from="1468598696685" duration="6358000" />
       <workItem from="1468853292816" duration="1707000" />
       <workItem from="1468859137753" duration="5352000" />
-      <workItem from="1468866165992" duration="4909000" />
-    </task>
-    <task id="LOCAL-00015" summary="add .gitignore">
-      <created>1466106525098</created>
-      <option name="number" value="00015" />
-      <option name="presentableId" value="LOCAL-00015" />
-      <option name="project" value="LOCAL" />
-      <updated>1466106525098</updated>
+      <workItem from="1468866165992" duration="4921000" />
     </task>
     <task id="LOCAL-00016" summary="add .gitignore">
       <created>1466106647782</created>
@@ -1239,7 +1231,14 @@
       <option name="project" value="LOCAL" />
       <updated>1468871157021</updated>
     </task>
-    <option name="localTasksCounter" value="64" />
+    <task id="LOCAL-00064" summary="add coverage">
+      <created>1468871225179</created>
+      <option name="number" value="00064" />
+      <option name="presentableId" value="LOCAL-00064" />
+      <option name="project" value="LOCAL" />
+      <updated>1468871225179</updated>
+    </task>
+    <option name="localTasksCounter" value="65" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -1275,7 +1274,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="349214000" />
+    <option name="totallyTimeSpent" value="349226000" />
   </component>
   <component name="TodoView" selected-index="4">
     <todo-panel id="selected-file">
