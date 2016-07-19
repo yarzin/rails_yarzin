@@ -34,6 +34,8 @@ gem 'paperclip'
 gem 'omniauth'
 gem "omniauth-google-oauth2"
 gem 'devise-bootstrap-views'
+gem 'cloudinary'
+gem 'paperclip-cloudinary'
 
 gem 'coveralls', require: false
 # Use ActiveModel has_secure_password
