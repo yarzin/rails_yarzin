@@ -22,8 +22,9 @@
 /*.komodoproject
 /geany
 /.idea/
-/.idea/workspace.xml/
+
 
 Будет удалено app/views/cart_mailer/
 Будет удалено coverage/
 Будет удалено spec/features/
+/.idea/workspace.xml
