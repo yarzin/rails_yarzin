@@ -1,51 +1,70 @@
 require 'rails_helper'
 
-RSpec.describe ProductsController do
-  let(:new_product) { FactoryGirl.build(:product) }
-  let!(:product) { FactoryGirl.create(:product) }
+describe ProductsController do
+  it 'assigns @products variable' do
+    prod = create(:product)
+    get :index
+    expect(assigns[:products]).not_to be_nil
+    expect(assigns[:products].first.name).to eql(prod.name)
+  end
 
+  it 'assigns @product variable' do
+    @request.env['devise.mapping'] = Devise.mappings[:user]
+    user = create(:user)
+    sign_in :user, user
+    get :new
+    expect(assigns[:product]).not_to be_nil
+  end
 
-  describe '#index' do
-    before(:each) do
-      get :index
-    end
-    it 'responds with a status of 200' do
-      expect(response.status).to eq(200)
-    end
-    it 'assigns the products instance variable' do
-      expect(assigns(:products)).to be_an(ActiveRecord::Relation)
-    end
+  it 'should create new product' do
+    @request.env['devise.mapping'] = Devise.mappings[:user]
+    user = create(:user)
+    sign_in :user, user
+    def_product = { name: 'Smartphone', description: 'Lenovo', price: 4999.99 }
+    post :create, product: def_product
+    expect(assigns[:product]).not_to be_nil
+    expect(assigns[:product].errors.size).to eql(0)
+    expect(Product.where(name: 'Smartphone').first).not_to be_nil
   end
-  describe '#create' do
-    let(:params) {{"product"=>{"description"=>"hello", "text"=>"these are the paramz", "price" => 400, "quantity" => 2}}}
-    it 'increments products in the database by 1' do
-      expect{post :create, params}.to change{Product.count}.by(1)
-    end
-    it 'responds with a status of 302' do
-      post :create, params
-      expect(response.status).to eq(302)
-    end
+
+  it 'should not create new product' do
+    @request.env['devise.mapping'] = Devise.mappings[:user]
+    user = create(:user)
+    sign_in :user, user
+    post :create, product: { name: 'TV', price: -10 }
+    expect(assigns[:product]).not_to be_nil
+    expect(assigns[:product].errors.size).to eql(1)
+    expect(assigns[:product].errors.messages[:price]).not_to be_nil
+    expect(Product.where(name: 'TV').first).to be_nil
   end
-  describe '#update' do
-    let(:params) {{"product"=>{"description"=>product.description, "text"=>":("}, "id"=>product.id}}
-    context 'on valid params' do
-      it 'responds with a status of 302' do
-        patch :update, params
-        expect(response.status).to eq(302)
-      end
-      it 'updates an product in the database' do
-        patch :update, params
-        expect(product.reload.text).to eq(":(")
-      end
-    end
+
+  it 'should update product' do
+    @request.env['devise.mapping'] = Devise.mappings[:user]
+    user = create(:user)
+    sign_in :user, user
+    prod = create(:product)
+    default_product = { name: 'TV', description: 'Full HD', price: 5999.99 }
+    put :update, id: prod.id, product: default_product
+    expect(response).to be_redirect
   end
-  describe '#destroy' do
-    it 'responds with a status of 302' do
-      delete :destroy, id: product.id
-      expect(response.status).to eq(302)
-    end
-    it 'decrements the products in the database by 1' do
-      expect{delete :destroy, id: product.id}.to change{Product.count}.by(-1)
-    end
+
+  it 'should not update product, render edit' do
+    @request.env['devise.mapping'] = Devise.mappings[:user]
+    user = create(:user)
+    sign_in :user, user
+    prod = create(:product)
+    default_product = { name: '', price: -9999.99 }
+    put :update, id: prod.id, product: default_product
+    expect(response).to render_template :edit
+  end
+
+  it 'should delete product, redirect to products' do
+    @request.env['devise.mapping'] = Devise.mappings[:user]
+    user = create(:user)
+    sign_in :user, user
+    prod = create(:product)
+    default_product = { name: 'TV', description: 'electron', price: 450 }
+    delete :destroy, id: prod.id, product: default_product
+    expect(response).to redirect_to products_path
   end
 end

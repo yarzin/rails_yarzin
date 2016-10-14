@@ -1,12 +1,26 @@
-require 'spec_helper'
-describe CartsController do
+require 'rails_helper'
 
-  describe "GET show" do
-    it "assigns the requested cart as @cart" do
-      cart = Cart.create!
-      get :show, {:id => cart.to_param}
-      assigns(:cart).should eq(cart)
-    end
+describe CartsController do
+  it do
+    @request.env['devise.mapping'] = Devise.mappings[:user]
+    user = create(:user)
+    sign_in :user, user
+    get :show
+    expect(assigns[:carts]).to be_nil
+  end
+
+  it 'should send confirmation email' do
+    @request.env['devise.mapping'] = Devise.mappings[:user]
+    user = create(:user)
+    sign_in :user, user
+    email = 'example@gmail.com'
+    post :send_mail, email: email
+  end
+
+  it 'should show order' do
+    @request.env['devise.mapping'] = Devise.mappings[:user]
+    user = create(:user)
+    sign_in :user, user
+    get :order
   end
 end
-
