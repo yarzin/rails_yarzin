@@ -21,3 +21,7 @@
 .*~
 /*.komodoproject
 /geany
+/.idea/
+Будет удалено app/views/cart_mailer/
+Будет удалено coverage/
+Будет удалено spec/features/
