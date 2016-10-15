@@ -5,7 +5,7 @@ script: bundle exec rake build
 services:
   - postgresql
 before_script:
-  - psql -c "create role rails_app with createdb login password 'pass123';" -U postgres
+  - psql -c "create role first_app with createdb login password 'pass123';" -U postgres
   - bundle exec rake db:setup
 notifications:
   email: true
