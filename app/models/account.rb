@@ -1,12 +1,10 @@
 class Account < ActiveRecord::Base
-   belongs_to :user
-   has_one :cart
+  has_one :cart
+  has_many :friendships
+  has_many :friends, through: :friendships,
+                     dependent: :destroy
+  belongs_to :user
 
-   has_many :friendships
-   has_many :friends, :through => :friendships
-   has_many :inverse_friendships, :class_name => "Friendship", :foreign_key => "friend_id"
-   has_many :inverse_friends, :through => :inverse_friendships, :source => :account
-
-  validates :name, presence: true, length: {minimum: 8}, format: {with: /\A(?=.*[a-z])[a-z\d]+\Z/i}
-  validates :age, presence: true, numericality: {greater_than_or_equal_to: 18, less_than_or_equal_to: 100}
+  validates :name, presence: true, allow_blank: false, format: { with: /(?!^\d+\z)\A.+\z/, message: "can't consists of only digits" }, length: { in: 8..20 }
+  validates :age, presence: true, allow_blank: false, inclusion: { in: 18..100, message: 'only from 18 to 100' }
 end

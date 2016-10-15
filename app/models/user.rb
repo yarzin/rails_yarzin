@@ -1,28 +1,38 @@
 class User < ActiveRecord::Base
+  after_create :create_account_with_cart
+
   # Include default devise modules. Others available are:
-  # :confirmable, :lockable, :timeoutable and :omniauthable
-  devise :database_authenticatable, :registerable,
-         :recoverable, :rememberable, :trackable, :validatable
-  devise :omniauthable, :omniauth_providers => [:google_oauth2]
+  # :confirmable, :lockable, :timeoutable
+  devise :database_authenticatable,
+         :registerable,
+         :recoverable,
+         :rememberable,
+         :trackable,
+         :validatable,
+         :omniauthable, omniauth_providers: [:google_oauth2]
+
   has_one :account
 
-  def self.find_for_google_oauth2(auth)
-    data = auth.info
-    if validate_email(auth)
-      user = User.where(provider: auth.provider, uid: auth.uid).first_or_create do |user|
-        user.provider = auth.provider
-        user.uid = auth.uid
-        user.email = auth.info.email
-        user.password = Devise.friendly_token[0,20]
-      end
-      user.token = auth.credentials.token
-      user.refresh_token = auth.credentials.refresh_token
-      user.save
-      return user
-    else
-      return nil
+  def self.from_omniauth(access_token)
+    data = access_token.info
+    user = User.where(email: data['email']).first
+    unless user
+      user = User.create(email: data['email'],
+                         password: Devise.friendly_token[0, 20])
     end
+    user
   end
 
+  private
 
+  def create_account_with_cart
+    @user = User.last
+    @account_user = Account.new(name: 'firstname', age: '19')
+    @cart = Cart.new
+    @user.account = @account_user
+    @user.account.cart = @cart
+    @user.save
+    @account_user.save
+    @cart.save
+  end
 end
