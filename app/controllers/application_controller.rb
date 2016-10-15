@@ -7,8 +7,10 @@ class ApplicationController < ActionController::Base
 
   private
   def set_locale
-    I18n.locale = params[:locale] if params[:locale].present?
+    I18n.locale = params[:locale] || session[:locale] || I18n.default_locale
+    session[:locale] = I18n.locale
   end
+
 
   def set_current_card
     session[:cart_id]||= Cart.create.id

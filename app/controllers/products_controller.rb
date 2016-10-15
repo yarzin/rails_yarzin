@@ -1,22 +1,30 @@
 class ProductsController < ApplicationController
   #before_action :authenticate_user!, except: [:index]
-  before_action :add_product, only: [:show, :edit, :update, :destroy]
+  before_action :find_product, only: [:show, :edit, :update, :destroy]
 
   def index
     @products = Product.all
-    #session[:view_count] += 1
-  end
-
-  def show
-
+    # session[:view_count] += 1
   end
 
   def new
     @product = Product.new
   end
 
+  def edit
+  end
+
+  def update
+    if @product.update(product_params)
+      redirect_to products_path
+    else
+      render 'edit'
+    end
+  end
+
   def create
     @product = Product.new(product_params)
+
     if @product.save
       flash[:create] = I18n.t 'msg_create'
       redirect_to products_path
@@ -25,16 +33,7 @@ class ProductsController < ApplicationController
     end
   end
 
-  def edit
-  end
-
-  def update
-    if @product.update(product_params)
-      flash[:info] = I18n.t 'msg_update'
-      redirect_to @product
-    else
-      render 'edit'
-    end
+  def show
   end
 
   def destroy
@@ -45,15 +44,11 @@ class ProductsController < ApplicationController
 
   private
 
-  def add_product
-    @product = Product.find(params[:id])
-  end
-
   def product_params
     params.require(:product).permit(:name, :description, :price, :image)
   end
 
-#  def initialize_session
-#   session[:view_count] ||= 0
-#  end
+  def find_product
+    @product = Product.find(params[:id])
+  end
 end

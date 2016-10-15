@@ -2,20 +2,19 @@ Rails.application.routes.draw do
 
   devise_for :users, :controllers => { :omniauth_callbacks => "users/omniauth_callbacks" }
 
-  resources :friendships
+  resources :accounts
   resources :products
 
   resource :cart, only: :show do
     collection do
-      get 'confirm'
+      get 'order'
     end
   end
-
   post '/carts/add_product', to: 'carts#add', as: 'add_to_cart'
   delete '/carts/remove_product', to: 'carts#remove', as: 'remove_from_cart'
-  match '/send_order', to: 'carts#send_order', via: 'post'
+  match '/send_mail', to: 'carts#send_mail', via: 'post'
 
-  resources :accounts
+
 
 
   # The priority is based upon order of creation: first created -> highest priority.

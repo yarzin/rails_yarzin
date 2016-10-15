@@ -1,4 +1,6 @@
-%p#notice= notice
+%p{:id => 'notice'}
+  = notice
+
 %p
   %strong Name:
   = @account.name
@@ -6,5 +8,4 @@
   %strong Age:
   = @account.age
 = link_to 'Edit', edit_account_path(@account)
-|
 = link_to 'Back', accounts_path
