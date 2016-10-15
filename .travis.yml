@@ -1,11 +1,11 @@
 language: ruby
 rvm:
- - 2.3.0
-script: bundle exec rake build
+- 2.3.0
+bundler_args: --jobs=2
+script:
+script:
+  - bundle exec rake db:setup
+  - bundle exec rake spec
+cache: bundler
 services:
   - postgresql
-before_script:
-  - psql -c "create role first_app with createdb login password 'pass123';" -U postgres
-  - bundle exec rake db:setup
-notifications:
-  email: true
