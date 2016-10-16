@@ -11,3 +11,5 @@ RoR: 4.2.6
 In my project i used:
 
 PostgreSQL, HTML, CSS, Paperclip, Devise, Rspec, Bootstrap, HAML, Coveralls, OmniAuth Google+, Factory Girl
+
+My project on heroku: https://hidden-waters-73156.herokuapp.com/
