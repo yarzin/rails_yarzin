@@ -2,21 +2,28 @@
 %html
   %head
     %meta{:content => "text/html; charset=UTF-8", "http-equiv" => "Content-Type"}/
-    %title RailsYarzin
+    %title Rails_yZin_shop
     = stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true
-    = stylesheet_link_tag "application"
     = javascript_include_tag 'application', 'data-turbolinks-track' => true
     = csrf_meta_tags
   %body
-    .log_out
-  - if user_signed_in?
-    = link_to 'Log out', destroy_user_session_path, method: :delete
-  - else
-    = link_to 'Log in', new_user_session_path
-    .google
-    = link_to "Sign in with Google", user_google_oauth2_omniauth_authorize_path
-    .I18n_link
-    = link_to 'EN', '?locale=en'
-    = link_to 'UA', '?locale=ua'
-    = link_to 'PL', '?locale=pl'
-    = yield
+    .container
+      - flash.each do |key, value|
+        %div{:class => "alert alert-#{key}"}= value
+
+      =link_to 'EN', '?locale=en', class: "btn btn-default"
+      =link_to 'UA', '?locale=ua', class: "btn btn-default"
+      =link_to 'PL', '?locale=pl', class: "btn btn-default"
+      .logins
+        -if user_signed_in?
+          = link_to 'Log out', destroy_user_session_path, :method => :delete, class: 'btn btn-success'
+        -else
+          = link_to 'Log in', new_user_session_path, class: 'btn btn-success'
+          = link_to 'Register', new_user_registration_path, class: 'btn btn-success'
+          = link_to 'Sign_in_with_google', user_google_oauth2_omniauth_authorize_path, class: 'btn btn-danger'
+      .header
+        = link_to "Demo shop", root_url, class: "btn btn-default"
+
+        = link_to 'shopping cart', cart_path, class: 'btn btn-success'
+
+      = yield

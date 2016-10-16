@@ -1,0 +1,17 @@
+.all_file
+  %h1= 'order'
+
+  .order_text
+    %p= 'Total price, UAH'
+  .order_price
+    = @total_sum
+
+  = form_tag send_mail_path do
+    .form-group
+      = label_tag 'email', 'Email', class: 'col-md-4 control-label'
+      .col-md-6
+        = email_field_tag 'email', current_user.email, class: 'form-control'
+    .submit_button
+      = submit_tag 'Confirm order', class: 'btn btn-default'
+  .order_button
+    = button_to 'Back to cart', cart_path, method: :get, class: 'btn btn-default'

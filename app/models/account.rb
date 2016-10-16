@@ -1,4 +1,5 @@
 class Account < ActiveRecord::Base
+
   has_one :cart
   has_many :friendships
   has_many :friends, through: :friendships,
