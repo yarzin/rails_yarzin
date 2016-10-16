@@ -1,9 +1,6 @@
 rrequire 'rails_helper'
 
 describe Account do
-  # let(:account) { build(:account)}
-  #
-  # it { expect(account).to validate_presence_of(:name) }
 
   it { is_expected.to validate_presence_of(:name) }
   it do
