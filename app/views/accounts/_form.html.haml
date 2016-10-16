@@ -1,5 +1,5 @@
-.deport-form
-= form_for(@account) do |f|
+.all_file
+= form_for @account, :html => {:class => 'form-horizontal center'}  do |f|
   - if @account.errors.any?
     #error_explanation
       %h2

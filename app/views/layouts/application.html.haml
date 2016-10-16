@@ -6,24 +6,28 @@
     = stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true
     = javascript_include_tag 'application', 'data-turbolinks-track' => true
     = csrf_meta_tags
-  %body
-    .container
+  %body.body
+    %header.header
       - flash.each do |key, value|
         %div{:class => "alert alert-#{key}"}= value
-      =link_to 'EN', '?locale=en', class: "btn btn-default"
-      =link_to 'UA', '?locale=ua', class: "btn btn-default"
-      =link_to 'PL', '?locale=pl', class: "btn btn-default"
+      .langs
+        =link_to 'EN', '?locale=en', class: "btn btn-success"
+        =link_to 'UA', '?locale=ua', class: "btn btn-warning"
+        =link_to 'PL', '?locale=pl', class: "btn btn-danger"
       .logins
         - if user_signed_in?
           Signed in as #{current_user.email}. Not you?
-          \#{link_to "Sign out", destroy_user_session_path, :method => :delete}
+          \#{link_to "Sign out", destroy_user_session_path, :method => :delete, class: 'btn btn-warning'}
         - else
           = link_to "Sign up", new_user_registration_path, class: 'btn btn-info'
           or
           = link_to "sign in", new_user_session_path, class: 'btn btn-success'
-    .header
-      = link_to "Demo shop", root_url, class: "btn btn-default"
-
-      = link_to 'shopping cart', cart_path, class: 'btn btn-success'
-
-      = yield
+      %br/
+      .demo
+        = link_to "Demo shop", root_url, class: "btn btn-info"
+        = link_to 'Shopping cart', cart_path, class: 'btn btn-primary'
+  %main.main
+    = yield
+  %footer.footer
+    %span= 'All rights reserved'
+    %span &copy; 2016

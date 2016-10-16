@@ -1,6 +1,36 @@
-// Place all the styles related to the carts controller here.
-// They will automatically be included in application.css.
+// Place all the styles related to the Carts controller here.
+// They will automatically be included in application.scss.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+.all_file {
+  //min-height: 400px;
+  min-width: 100%;
+  min-height: 100%;
+  position: relative;
+}
 
+.links_inline {
+  display: inline-block;
+}
 
+.button_right {
+  float: right;
+  margin-right: 150px;
+}
 
+.order_price, .order_text {
+  font-size: 18px;
+  display: inline-block;
+  margin: 30px;
+}
+
+.order_price {
+  font-weight: bold;
+}
+
+.order_text p {
+  font-size: 18px;
+}
+
+.order_button {
+  margin-top: 50px;
+}

@@ -1,23 +1,30 @@
-%h2= t('h1.product_list')
+.all_file
+  - flash.each do |key, value|
+    .alert{role: "alert", class: colored_class(key)}= value
+  .links.cart_pic
+    = link_to image_tag('cart.gif', size: "90x60"), cart_path
+%h2.header1= t('h1.product_list')
 
-%table.table.table-hover
-  - @products.each do |product|
-    %thead
-      %tr
-        %th= 'Image'
-        %th= t('product.name')
-        %th= t('product.description')
-        %th= t('product.price')
+%table.table.table-condensed.my_table
+  %thead
     %tr
-      %td= image_tag product.image.url(:thumb)
-      %td= product.name
-      %td= product.description
-      %td= product.price
-      %td= link_to t('buttons.button_show'), product, class: 'btn btn-default btn-sm'
-      %td= link_to t('buttons.button_edit'), edit_product_path(product), class: 'btn btn-default btn-sm'
-      %td= link_to t('buttons.button_destroy'), product, method: :delete, data: { confirm: 'Are you sure?' }, class: 'btn btn-default btn-sm'
-      %td= button_to t('buttons.button_add_cart'), add_to_cart_path(product_id: product.id), remote: true
+      %th= 'Image'
+      %th= t('product.name')
+      %th= t('product.description')
+      %th= t('product.price')
+      %th(colspan="4")
+  %tbody
+    - @products.each do |product|
+      %tr
+        %td= image_tag product.image.url(:thumb)
+        %td= product.name
+        %td= product.description
+        %td= product.price
+        %td= link_to t('buttons.button_show'), product, class: 'btn btn-default btn-sm'
+        %td= link_to t('buttons.button_edit'), edit_product_path(product), class: 'btn btn-default btn-sm'
+        %td= link_to t('buttons.button_destroy'), product, method: :delete, data: { confirm: 'Are you sure?' }, class: 'btn btn-default btn-sm'
+        %td= button_to t('buttons.button_add_cart'), add_to_cart_path(product_id: product.id), remote: true
 
-%br
+.links
 = link_to t('buttons.button_create_product'), new_product_path, class: 'btn btn-success'
 = link_to t('buttons.button_all_accounts'), accounts_path, class: 'btn btn-info'
