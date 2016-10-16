@@ -1,8 +1,9 @@
 class AccountsController < ApplicationController
+  #before_action :authenticate_user!
+  #before_action :user_admin?
+  #before_action :authorize_admin, except: :new
   before_action :set_account, only: [:show, :edit, :update, :destroy]
-  #before_action :authenticate_user!, except: [:index]
-  # GET /accounts
-  # GET /accounts.json
+
   def index
     @accounts = Account.all.order(:age)
   end

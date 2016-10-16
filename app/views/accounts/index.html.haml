@@ -10,9 +10,9 @@
       %tr
         %td= account.name
         %td= account.age
-        %td= button_to t('buttons.button_show'), account
-        %td= button_to t('buttons.button_edit'), edit_account_path(account)
-        %td= button_to t('buttons.button_destroy'), account, method: :delete, data: { confirm: 'Are you sure?' }
+        %td= link_to t('buttons.button_show'), account, class: 'btn btn-primary'
+        %td= link_to t('buttons.button_edit'), edit_account_path(account), class: 'btn btn-warning'
+        %td= link_to t('buttons.button_destroy'), account, method: :delete, data: { confirm: 'Are you sure?' }, class: 'btn btn-danger'
 %br/
 .links
   = link_to t('links.link_new_account'), new_account_path, class: 'btn btn-info'
