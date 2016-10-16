@@ -1,0 +1,2 @@
+[![Coverage Status](https://coveralls.io/repos/github/yarzin/rails_yarzin/badge.svg?branch=master)](https://coveralls.io/github/yarzin/rails_yarzin?branch=master)
+[![Build Status](https://travis-ci.org/yarzin/rails_yarzin.svg?branch=master)](https://travis-ci.org/yarzin/rails_yarzin)
