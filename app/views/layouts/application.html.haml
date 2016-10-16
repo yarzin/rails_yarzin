@@ -10,20 +10,20 @@
     .container
       - flash.each do |key, value|
         %div{:class => "alert alert-#{key}"}= value
-
       =link_to 'EN', '?locale=en', class: "btn btn-default"
       =link_to 'UA', '?locale=ua', class: "btn btn-default"
       =link_to 'PL', '?locale=pl', class: "btn btn-default"
       .logins
-        -if user_signed_in?
-          = link_to 'Log out', destroy_user_session_path, :method => :delete, class: 'btn btn-success'
-        -else
-          = link_to 'Log in', new_user_session_path, class: 'btn btn-success'
-          = link_to 'Register', new_user_registration_path, class: 'btn btn-success'
-          = link_to 'Sign_in_with_google', user_google_oauth2_omniauth_authorize_path, class: 'btn btn-danger'
-      .header
-        = link_to "Demo shop", root_url, class: "btn btn-default"
+        - if user_signed_in?
+          Signed in as #{current_user.email}. Not you?
+          \#{link_to "Sign out", destroy_user_session_path, :method => :delete}
+        - else
+          = link_to "Sign up", new_user_registration_path, class: 'btn btn-info'
+          or
+          = link_to "sign in", new_user_session_path, class: 'btn btn-success'
+    .header
+      = link_to "Demo shop", root_url, class: "btn btn-default"
 
-        = link_to 'shopping cart', cart_path, class: 'btn btn-success'
+      = link_to 'shopping cart', cart_path, class: 'btn btn-success'
 
       = yield

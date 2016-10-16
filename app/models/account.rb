@@ -6,6 +6,6 @@ class Account < ActiveRecord::Base
                      dependent: :destroy
   belongs_to :user
 
-  validates :name, presence: true, allow_blank: false, format: { with: /(?!^\d+\z)\A.+\z/, message: "can't consists of only digits" }, length: { in: 8..20 }
+  validates :name, presence: true, allow_blank: false, format: { with: /(?!^\d+\z)\A.+\z/, message: "can't consists of only digits" }, length: { in: 4..15 }
   validates :age, presence: true, allow_blank: false, inclusion: { in: 18..100, message: 'only from 18 to 100' }
 end
