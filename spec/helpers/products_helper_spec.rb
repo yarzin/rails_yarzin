@@ -1,11 +1,6 @@
 require 'rails_helper'
 
-describe ProductsHelper do
-  it do
-    helper.colored_class(:create)
-  end
 
-  it do
-    helper.colored_class(:destroy)
-  end
+RSpec.describe UserHelper, type: :helper do
+  pending "add some examples to (or delete) #{__FILE__}"
 end
